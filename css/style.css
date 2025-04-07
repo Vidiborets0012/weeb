@@ -68,10 +68,16 @@ body {
   background: #0f172a;
 }
 
+@media (max-width: 767.98px) {
+  body {
+    font-size: 16px;
+  }
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
-  block-size: 100%;
+  min-height: 100%;
   overflow: clip;
 }
 
@@ -83,6 +89,9 @@ body {
 
 .header {
   padding-block: 24px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 
 .header__container {
@@ -295,5 +304,26 @@ body {
     .actions-header__button {
       display: none;
     }
+  }
+}
+
+.page {
+}
+
+.page__hero {
+}
+
+.hero {
+  padding-top: 104px;
+}
+
+@media (max-width: 991.98px) {
+  .hero {
+    padding-top: 70px;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero {
+    padding-top: 35px;
   }
 }
