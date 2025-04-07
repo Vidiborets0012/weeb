@@ -4,7 +4,7 @@ html {
 
 html,
 body {
-  min-block-size: 100%;
+  block-size: 100%;
 }
 
 *,
@@ -53,8 +53,20 @@ h6 {
 
 body {
   font-family: 'Roboto-Regular', sans-serif;
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
   color: #fff;
   background: #0f172a;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  block-size: 100%;
+  overflow: clip;
+}
+
+.page {
+  flex-grow: 1;
 }
