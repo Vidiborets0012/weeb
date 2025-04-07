@@ -48,9 +48,9 @@
   justify-content: center;
   gap: 32px;
 }
-.block-header--center {
+/* .block-header--center {
   text-align: center;
-}
+} */
 .block-header__title {
   font-family: 'Roboto-ExtraBold', sans-serif;
   font-size: 72px;
