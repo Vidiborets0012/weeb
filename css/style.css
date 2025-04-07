@@ -37,6 +37,12 @@ img {
   vertical-align: top;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 h1,
 h2,
 h3,
@@ -80,6 +86,7 @@ body {
 }
 
 .header__container {
+  max-inline-size: 1030px;
 }
 
 .header__body {
@@ -87,13 +94,17 @@ body {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 5px 46px;
+  max-inline-size: 1030px;
   padding: 24px;
   border-radius: 20px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07), 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  background: rgba(255, 255, 255, 0.05);
+  background-color: #192131;
+  /* background: rgba(255, 255, 255, 0.05); */
 }
 
 .header__link-logo {
+  position: relative;
+  z-index: 3;
   font-family: 'Roboto-Bold', sans-serif;
   font-weight: 700;
   font-size: 32px;
@@ -105,21 +116,12 @@ body {
   color: #6b24ae;
 }
 
-.header__menu {
-}
-.menu {
-}
-.menu__body {
-}
-
 .menu__list {
   display: flex;
   flex-wrap: wrap;
   gap: 5px 24px;
 }
 
-.menu__item {
-}
 .menu__link {
   font-family: 'Roboto-Medium', sans-serif;
   font-weight: 500;
@@ -134,19 +136,164 @@ body {
   color: #6b24ae;
 }
 
-.header__actions {
+.actions-header {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0 16px;
 }
-.actions-header {
+
+.icon-menu {
+  display: none;
 }
-.actions-header__button {
+
+/* ***** tablet ***** */
+
+@media (max-width: 991.98px) {
+  .header {
+    padding-block: 16px;
+  }
+
+  .header__body {
+    gap: 5px 25px;
+    padding: 15px;
+  }
+
+  .menu__list {
+    gap: 5px 20px;
+  }
+
+  .header__actions {
+    gap: 0 10px;
+  }
+
+  .actions-header__button.button--mini {
+    padding-inline: 15px;
+  }
 }
-.button {
-}
-.button--mini {
-}
-.button--transparent {
+
+/* ***** mob ***** */
+
+@media (max-width: 767.98px) {
+  .menu {
+    position: fixed;
+    inset-inline-start: -100%;
+    inset-block-start: 0;
+    block-size: 100%;
+    inline-size: 100%;
+
+    overflow: auto;
+
+    background-color: #0f172a;
+
+    padding-block-start: 105px;
+    padding-block-end: 30px;
+    padding-inline: 15px;
+    transition: inset-inline-start 0.3s ease;
+  }
+
+  .menu::before {
+    position: fixed;
+    content: '';
+    z-index: 2;
+    block-size: 64px;
+    inset-block-start: 15px;
+    inset-inline-start: 15px;
+    inset-inline-end: 15px;
+
+    visibility: hidden;
+
+    border-radius: 20px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07), 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    background-color: #192131;
+
+    transition: visibility 0.3s;
+  }
+
+  .open-menu .menu {
+    inset-inline-start: 0;
+  }
+
+  .open-menu .menu::before {
+    visibility: visible;
+  }
+
+  .header__body {
+    padding-block: 8px;
+    padding-inline-start: 24px;
+    padding-inline-end: 8px;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px 24px;
+    padding-inline-end: 18px;
+  }
+
+  .menu__link {
+    font-size: 30px;
+  }
+
+  .icon-menu {
+    position: relative;
+    z-index: 3;
+    inline-size: 48px;
+    block-size: 48px;
+    display: flex;
+  }
+  .icon-menu__bar,
+  .icon-menu::before,
+  .icon-menu::after {
+    position: absolute;
+    content: '';
+    block-size: 4px;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+
+  .open-menu .icon-menu__bar {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    inline-size: 32px;
+  }
+
+  .open-menu .icon-menu::before {
+    transform: translate(0, 2px) rotate(45deg);
+  }
+
+  .open-menu .icon-menu::after {
+    transform: translate(0, -2px) rotate(45deg);
+  }
+
+  .icon-menu__bar {
+    inset-inline-start: 50%;
+    inset-block-start: 50%;
+    transform: translate(-50%, -50%);
+    inline-size: 28px;
+  }
+
+  .icon-menu::before,
+  .icon-menu::after {
+    inline-size: 15px;
+  }
+
+  .icon-menu::before {
+    inset-inline-start: 10px;
+    inset-block-start: 14px;
+  }
+
+  .icon-menu::after {
+    inset-inline-end: 10px;
+    inset-block-end: 14px;
+  }
+
+  @media (max-width: 439.98px) {
+    .actions-header__button {
+      display: none;
+    }
+  }
 }
