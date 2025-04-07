@@ -72,3 +72,81 @@ body {
 .page {
   flex-grow: 1;
 }
+
+/* **************** header */
+
+.header {
+  padding-block: 24px;
+}
+
+.header__container {
+}
+
+.header__body {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 5px 46px;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07), 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.header__link-logo {
+  font-family: 'Roboto-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.1;
+  transition: color 0.3s ease;
+}
+
+.header__link-logo:hover {
+  color: #6b24ae;
+}
+
+.header__menu {
+}
+.menu {
+}
+.menu__body {
+}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 24px;
+}
+
+.menu__item {
+}
+.menu__link {
+  font-family: 'Roboto-Medium', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.menu__link:hover {
+  color: #6b24ae;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 16px;
+}
+.actions-header {
+}
+.actions-header__button {
+}
+.button {
+}
+.button--mini {
+}
+.button--transparent {
+}
