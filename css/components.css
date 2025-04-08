@@ -138,10 +138,14 @@
   background-color: #c084fc;
 }
 
+.testimonials .block-header__line::before {
+  left: 0;
+}
+
 .block-header__line--bottom::before {
   bottom: 0;
   height: 5px;
-  width: 190px;
+  width: 96%;
 }
 
 .block-header__line--top::before {
@@ -209,7 +213,7 @@
     font-size: 60px;
   }
 
-  .block-header__line--bottom::before {
+  .hero .block-header__line--bottom::before {
     display: none;
   }
 
