@@ -198,10 +198,6 @@
 }
 
 @media (max-width: 991.98px) {
-  /* .discover__title {
-    font-size: 60px;
-  } */
-
   .block-header__border::before {
     left: -7px;
     border: 3px solid #c2410c;
@@ -209,10 +205,6 @@
 }
 
 @media (max-width: 767.98px) {
-  /* .discover__title {
-    font-size: 56px;
-  } */
-
   .block-header__title {
     font-size: 60px;
   }
