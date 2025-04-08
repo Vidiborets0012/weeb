@@ -306,11 +306,14 @@ body {
     }
   }
 }
-
+/* ************************* */
 .page {
 }
 
 .page__hero {
+}
+
+.page__companies {
 }
 
 [class*='page__'] {
@@ -330,7 +333,7 @@ body {
     padding-bottom: 48px;
   }
 }
-
+/* ********************* */
 .hero {
   padding-top: 104px;
 }
@@ -367,4 +370,43 @@ body {
   hero__block-header {
     margin-bottom: 48px;
   }
+}
+/* ************************* */
+
+.companies {
+}
+.companies__container {
+}
+.companies__title {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 991.98px) {
+  .companies__title {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .companies__title {
+    margin-bottom: 48px;
+  }
+}
+
+.title {
+}
+.title--center {
+}
+.companies__list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.companies__item {
+}
+.companies__link {
+}
+.companies__img {
 }
