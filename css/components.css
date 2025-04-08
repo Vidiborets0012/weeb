@@ -54,6 +54,7 @@
   font-weight: 800;
   font-size: 56px;
   line-height: 1.1;
+  text-wrap: balance;
 }
 
 .title--center {
@@ -75,32 +76,57 @@
 @media (max-width: 479.98px) {
 }
 /* *************************** */
+.label {
+  font-family: 'Roboto-Bold', sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.label--margin {
+  margin-bottom: 16px;
+}
+/* *************************** */
 
 .hero__block-header {
 }
 .block-header {
   display: grid;
-  justify-content: center;
   gap: 32px;
 }
-/* .block-header--center {
-  text-align: center;
-} */
+
+.block-header--center {
+  justify-content: center;
+}
+
 .block-header__title {
   font-family: 'Roboto-ExtraBold', sans-serif;
   font-size: 72px;
   line-height: 1.1;
   text-wrap: balance;
 }
+
+.block-header__border,
 .block-header__line {
   position: relative;
 }
 
+.block-header__border span,
 .block-header__line span {
   position: relative;
   z-index: 2;
 
   display: inline-block;
+}
+
+.block-header__border::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  height: 100%;
+  width: 98%;
+  border: 5px solid #c2410c;
 }
 
 .block-header__line::before {
@@ -126,9 +152,19 @@
   color: #9333ea;
 }
 
+.block-header__lite-purpur {
+  color: #c084fc;
+}
+
 .block-header__text {
   max-width: 760px;
+  text-wrap: balance;
+  /* display: inline-block; */
 }
+
+/* .block-header__text:not(:last-child) {
+  margin-bottom: 32px;
+} */
 
 .block-header__buttons {
   display: flex;
@@ -148,6 +184,39 @@
 .block-header__img {
 }
 
+.block-header__link {
+  justify-self: start;
+  padding-right: 35px;
+  background: url('../images/icons/arrow-right.svg') right no-repeat;
+}
+
+.block-header__link span {
+  position: relative;
+  display: inline-block;
+}
+
+.block-header__link span::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #9333ea;
+  transition: width 0.5s;
+}
+
+.block-header__link:hover span::after {
+  width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .block-header__border::before {
+    left: -7px;
+    border: 3px solid #c2410c;
+  }
+}
+
 @media (max-width: 767.98px) {
   .block-header__title {
     font-size: 56px;
@@ -160,6 +229,12 @@
   .block-header__line--top::before {
     top: 13px;
     width: 152px;
+  }
+
+  .block-header__border::before {
+    left: -5px;
+    width: 98%;
+    border: 2px solid #c2410c;
   }
 }
 
