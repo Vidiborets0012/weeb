@@ -1,4 +1,4 @@
-@import url('components.css');
+/* @import url('components.css'); */
 
 html {
   box-sizing: border-box;
@@ -379,10 +379,6 @@ body {
 }
 /* ************************* */
 
-.companies {
-}
-.companies__container {
-}
 .companies__title {
   margin-bottom: 80px;
 }
@@ -399,10 +395,6 @@ body {
   }
 }
 
-.title {
-}
-.title--center {
-}
 .companies__list {
   display: flex;
   justify-content: space-evenly;
@@ -410,27 +402,14 @@ body {
   gap: 24px;
   flex-wrap: wrap;
 }
-.companies__item {
-}
-.companies__link {
-}
-.companies__img {
-}
-/* ******************************* */
 
-.discover {
-}
+/* ******************************* */
 
 .discover__container {
   display: grid;
   align-items: start;
   grid-template-columns: 1fr 29.3%;
   gap: 0 80px;
-}
-
-.discover__body {
-}
-.discover__block-header {
 }
 
 .discover__media {
@@ -464,8 +443,6 @@ body {
 }
 /* ******************************** */
 
-.powerful {
-}
 .powerful__container {
   display: grid;
   align-items: start;
@@ -475,10 +452,7 @@ body {
 .powerful__body {
   align-self: center;
 }
-.powerful__block-header {
-}
-.powerful__media {
-}
+
 .powerful__image {
   max-width: 100%;
 
