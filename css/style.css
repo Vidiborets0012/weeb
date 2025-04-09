@@ -572,11 +572,7 @@ body {
   column-gap: 80px;
   align-items: center;
 }
-.testimonials__block-header {
-}
 
-.testimonials__media {
-}
 .testimonials__image {
   max-width: 100%;
   border-radius: 50px;
@@ -585,9 +581,6 @@ body {
   background: #fff;
 
   overflow: hidden;
-}
-
-.testimonials__item {
 }
 
 .item-testimonials {
