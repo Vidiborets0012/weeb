@@ -52,6 +52,10 @@
   text-align: center;
 }
 
+.title--black {
+  color: #000;
+}
+
 @media (max-width: 991.98px) {
   .title {
     font-size: 46px;
@@ -247,4 +251,10 @@
     flex-direction: column;
     align-items: stretch;
   }
+}
+
+.link-event {
+  background: url('../images/icons/arrow-right-purpur.svg') right no-repeat;
+  padding-right: 35px;
+  color: #9333ea;
 }
