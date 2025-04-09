@@ -52,10 +52,6 @@
   text-align: center;
 }
 
-.title--black {
-  color: #000;
-}
-
 @media (max-width: 991.98px) {
   .title {
     font-size: 46px;
@@ -257,4 +253,25 @@
   background: url('../images/icons/arrow-right-purpur.svg') right no-repeat;
   padding-right: 35px;
   color: #9333ea;
+  transition: color 0.3s;
+}
+
+.link-event span {
+  position: relative;
+  display: inline-block;
+}
+
+.link-event span::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #0f172a;
+  transition: width 0.5s;
+}
+
+.link-event:hover span::after {
+  width: 100%;
 }
