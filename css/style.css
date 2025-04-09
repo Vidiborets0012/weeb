@@ -646,8 +646,6 @@ body {
   color: #0f172a;
 }
 
-.events__container {
-}
 .events__header {
   display: flex;
   align-items: center;
@@ -659,24 +657,14 @@ body {
   margin-bottom: 24px;
 }
 
-.events__title {
-}
-.title {
-}
-
 .events__link {
   flex-shrink: 0;
-}
-.link-event {
 }
 
 .events__items {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(330px, 100%), 1fr));
   gap: 24px;
-}
-
-.events__item {
 }
 
 .item-event {
@@ -759,7 +747,20 @@ body {
   color: #6b21a8;
 }
 
-.body-item-event__link-title {
+@media (max-width: 991.98px) {
+  .body-item-event__title {
+    font-size: 32px;
+  }
 }
-.body-item-event__link {
+@media (max-width: 767.98px) {
+  .body-item-event__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 467.98px) {
+  .events__header {
+    flex-direction: column;
+    text-align: center;
+  }
 }
