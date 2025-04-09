@@ -834,6 +834,7 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
+  font-size: 0;
 }
 
 @media (max-width: 1279.98px) {
